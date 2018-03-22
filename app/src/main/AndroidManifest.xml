@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zpj.myapplication8">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>-->
+    <!--<uses-permission android:name="com.zpj.myapplication8.MY_BROADCAST"/>-->
 
     <application
         android:allowBackup="true"
@@ -18,9 +21,13 @@
         </activity>
 
         <receiver
-            android:name=".BootCompleteReceiver"
+            android:name=".MyBroadcastReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.zpj.myapplication8.MY_BROADCAST"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
