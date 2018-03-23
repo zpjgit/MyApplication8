@@ -14,6 +14,6 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 //        throw new UnsupportedOperationException("Not yet implemented");
 //        Toast.makeText(context, "Boot Complete", Toast.LENGTH_LONG).show();
         Toast.makeText(context, "received in MyBroadcastReceiver", Toast.LENGTH_SHORT).show();
-
+        abortBroadcast();
     }
 }

@@ -24,7 +24,7 @@
             android:name=".MyBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
-            <intent-filter>
+            <intent-filter android:priority="100">
                 <action android:name="com.zpj.myapplication8.MY_BROADCAST"/>
             </intent-filter>
         </receiver>

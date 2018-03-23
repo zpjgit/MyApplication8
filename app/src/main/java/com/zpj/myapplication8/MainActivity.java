@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent("com.zpj.myapplication8.MY_BROADCAST");
-                sendBroadcast(intent);
+                sendOrderedBroadcast(intent, null);
             }
         });
     }
